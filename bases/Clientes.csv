@@ -1,0 +1,21 @@
+﻿idCliente,nombre,edad,telefono,sexo,tieneTitulo
+1001,Andres Hernandez,32,"11222345",hombre,false
+1002,Juan Montoya,18,11227349,hombre,true
+1003,Camilo Paz,28,11221123,hombre,true
+1004,Fernando Diaz,20,11223425,hombre,true
+1005,Luis Daza,40,11229263,hombre,false
+1006,Angelica Ortiz,26,11224783,mujer,true
+1007,Angel Rendon,33,11222349,hombre,true
+1008,Diana Guzman,34,11222347,mujer,true
+1009,Jhon Hernandez,42,11222345,hombre,false
+1010,Nancy Cuervo,38,11224567,mujer,true
+1011,Patricia Amaya,27,11225678,mujer,true
+1012,Fernando Sepulveda,64,11229877,hombre,true
+1013,Manuel Ocampo,19,11228765,hombre,true
+1014,Linda Giraldo,29,11226543,mujer,true
+1015,Amparo Gritales,78,11225432,mujer,false
+1016,Kelvin Lozada,30,11224321,hombre,true
+1017,Lucia Sentada,32,11229753,mujer,false
+1018,Henry Zambrano,44,11228642,hombre,false
+1019,Daniel Luna,35,11227531,hombre,true
+1020,Monica Umaña,29,11220011,mujer,true
