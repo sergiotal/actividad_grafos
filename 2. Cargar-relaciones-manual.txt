@@ -1,0 +1,771 @@
+// Relaciones entre Clientes y Direcciones
+MATCH (c1:Cliente {idCliente:1001}), (d1:Direccion {idDireccion: 22210})
+CREATE (c1)-[:VIVE_EN]->(d1)
+WITH c1, d1
+
+MATCH (c2:Cliente {idCliente:1002}), (d2:Direccion {idDireccion: 22211})
+CREATE (c2)-[:VIVE_EN]->(d2)
+WITH c2, d2
+
+MATCH (c3:Cliente {idCliente:1003}), (d3:Direccion {idDireccion: 22212})
+CREATE (c3)-[:VIVE_EN]->(d3)
+WITH c3, d3
+
+MATCH (c4:Cliente {idCliente:1004}), (d4:Direccion {idDireccion: 22213})
+CREATE (c4)-[:VIVE_EN]->(d4)
+WITH c4, d4
+
+MATCH (c5:Cliente {idCliente:1005}), (d5:Direccion {idDireccion: 22214})
+CREATE (c5)-[:VIVE_EN]->(d5)
+WITH c5, d5
+
+MATCH (c6:Cliente {idCliente:1006}), (d6:Direccion {idDireccion: 22215})
+CREATE (c6)-[:VIVE_EN]->(d6)
+WITH c6, d6
+
+MATCH (c7:Cliente {idCliente:1007}), (d7:Direccion {idDireccion: 22216})
+CREATE (c7)-[:VIVE_EN]->(d7)
+WITH c7, d7
+
+MATCH (c8:Cliente {idCliente:1008}), (d8:Direccion {idDireccion: 22217})
+CREATE (c8)-[:VIVE_EN]->(d8)
+WITH c8, d8
+
+MATCH (c9:Cliente {idCliente:1009}), (d9:Direccion {idDireccion: 22218})
+CREATE (c9)-[:VIVE_EN]->(d9)
+WITH c9, d9
+
+MATCH (c10:Cliente {idCliente:1010}), (d10:Direccion {idDireccion: 22219})
+CREATE (c10)-[:VIVE_EN]->(d10)
+WITH c10, d10
+
+MATCH (c11:Cliente {idCliente:1011}), (d11:Direccion {idDireccion: 22220})
+CREATE (c11)-[:VIVE_EN]->(d11)
+WITH c11, d11
+
+MATCH (c12:Cliente {idCliente:1012}), (d12:Direccion {idDireccion: 22221})
+CREATE (c12)-[:VIVE_EN]->(d12)
+WITH c12, d12
+
+MATCH (c13:Cliente {idCliente:1013}), (d13:Direccion {idDireccion: 22222})
+CREATE (c13)-[:VIVE_EN]->(d13)
+WITH c13, d13
+
+MATCH (c14:Cliente {idCliente:1014}), (d14:Direccion {idDireccion: 22223})
+CREATE (c14)-[:VIVE_EN]->(d14)
+WITH c14, d14
+
+MATCH (c15:Cliente {idCliente:1015}), (d15:Direccion {idDireccion: 22224})
+CREATE (c15)-[:VIVE_EN]->(d15)
+WITH c15, d15
+
+MATCH (c16:Cliente {idCliente:1016}), (d16:Direccion {idDireccion: 22225})
+CREATE (c16)-[:VIVE_EN]->(d16)
+WITH c16, d16
+
+MATCH (c17:Cliente {idCliente:1017}), (d17:Direccion {idDireccion: 22226})
+CREATE (c17)-[:VIVE_EN]->(d17)
+WITH c17, d17
+
+MATCH (c18:Cliente {idCliente:1018}), (d18:Direccion {idDireccion: 22226})
+CREATE (c18)-[:VIVE_EN]->(d18)
+WITH c18, d18
+
+MATCH (c19:Cliente {idCliente:1019}), (d19:Direccion {idDireccion: 22228})
+CREATE (c19)-[:VIVE_EN]->(d19)
+WITH c19, d19
+
+MATCH (c20:Cliente {idCliente:1020}), (d20:Direccion {idDireccion: 22229})
+CREATE (c20)-[:VIVE_EN]->(d20);
+
+
+
+// Relaciones entre Direcciones y Ciudades
+MATCH (d1: Direccion{idDireccion: 22210}), (c1 :Ciudad{idCiudad: 3310})
+CREATE (d1)-[:ESTA_UBICADA_EN]->(c1)
+WITH d1, c1
+
+MATCH (d2: Direccion{idDireccion: 22211}), (c2: Ciudad{idCiudad: 3310})
+CREATE (d2)-[:ESTA_UBICADA_EN]->(c2)
+WITH d2, c2
+
+MATCH (d3: Direccion{idDireccion: 22212}), (c3: Ciudad{idCiudad: 3301})
+CREATE (d3)-[:ESTA_UBICADA_EN]->(c3)
+WITH d3, c3
+
+MATCH (d4: Direccion{idDireccion: 22213}), (c4: Ciudad{idCiudad: 3301})
+CREATE (d4)-[:ESTA_UBICADA_EN]->(c4)
+WITH d4, c4
+
+MATCH (d5: Direccion{idDireccion: 22214}), (c5: Ciudad{idCiudad: 3309})
+CREATE (d5)-[:ESTA_UBICADA_EN]->(c5)
+WITH d5, c5
+
+MATCH (d6: Direccion{idDireccion: 22215}), (c6: Ciudad{idCiudad: 3306})
+CREATE (d6)-[:ESTA_UBICADA_EN]->(c6)
+WITH d6, c6
+
+MATCH (d7: Direccion{idDireccion: 22216}), (c7: Ciudad{idCiudad: 3307})
+CREATE (d7)-[:ESTA_UBICADA_EN]->(c7)
+WITH d7, c7
+
+MATCH (d8:Direccion{idDireccion: 22217}), (c8: Ciudad {idCiudad: 3309})
+CREATE (d8)-[:ESTA_UBICADA_EN]->(c8)
+WITH d8, c8
+
+MATCH (d9:Direccion{idDireccion: 22218}), (c9: Ciudad {idCiudad: 3309})
+CREATE (d9)-[:ESTA_UBICADA_EN]->(c9)
+WITH d9, c9
+
+MATCH (d10: Direccion{idDireccion: 22219}), (c10: Ciudad {idCiudad: 3310})
+CREATE (d10)-[:ESTA_UBICADA_EN]->(c10)
+WITH d10, c10
+
+MATCH (d11:Direccion{idDireccion: 22220}), (c11: Ciudad {idCiudad: 3311})
+CREATE (d11)-[:ESTA_UBICADA_EN]->(c11)
+WITH d11, c11
+
+MATCH (d12: Direccion{idDireccion: 22221}), (c12: Ciudad {idCiudad: 3312})
+CREATE (d12)-[:ESTA_UBICADA_EN]->(c12)
+WITH d12, c12
+
+MATCH (d13: Direccion{idDireccion: 22222}), (c13: Ciudad {idCiudad: 3313})
+CREATE (d13)-[:ESTA_UBICADA_EN]->(c13)
+WITH d13, c13
+
+MATCH (d14: Direccion{idDireccion: 22223}), (c14: Ciudad {idCiudad: 3317})
+CREATE (d14)-[:ESTA_UBICADA_EN]->(c14)
+WITH d14, c14
+
+MATCH (d15: Direccion{idDireccion: 22224}), (c15: Ciudad {idCiudad: 3317})
+CREATE (d15)-[:ESTA_UBICADA_EN]->(c15)
+WITH d15, c15
+
+MATCH (d16: Direccion{idDireccion: 22225}), (c16: Ciudad {idCiudad: 3316})
+CREATE (d16)-[:ESTA_UBICADA_EN]->(c16)
+WITH d16, c16
+
+MATCH (d17:Direccion {idDireccion: 22226}), (c17: Ciudad {idCiudad: 3317})
+CREATE (d17)-[:ESTA_UBICADA_EN]->(c17)
+WITH d17, c17
+
+MATCH (d18: Direccion {idDireccion: 22227}), (c18: Ciudad {idCiudad: 3318})
+CREATE (d18)-[:ESTA_UBICADA_EN]->(c18)
+WITH d18, c18
+
+MATCH (d19: Direccion {idDireccion: 22228}), (c19: Ciudad {idCiudad: 3316})
+CREATE (d19)-[:ESTA_UBICADA_EN]->(c19)
+WITH d19, c19
+
+MATCH (d20: Direccion {idDireccion:22229}), (c20: Ciudad {idCiudad: 3315})
+CREATE (d20)-[:ESTA_UBICADA_EN]->(c20);
+
+
+
+// Relaciones entre Proveedores y Ciudades
+MATCH (p1: Proveedor{idProveedor: 9001}), (c1: Ciudad{idCiudad: 3301})
+CREATE (p1)-[:SE_UBICA_EN]->(c1)
+WITH p1, c1
+
+MATCH (p2: Proveedor{idProveedor: 9002}), (c2: Ciudad{idCiudad: 3305})
+CREATE (p2)-[:SE_UBICA_EN]->(c2)
+WITH p2, c2
+
+MATCH (p3: Proveedor{idProveedor: 9003}), (c3: Ciudad{idCiudad: 3318})
+CREATE (p3)-[:SE_UBICA_EN]->(c3)
+WITH p3, c3
+
+MATCH (p4: Proveedor{idProveedor: 9004}), (c4: Ciudad{idCiudad: 3308})
+CREATE (p4)-[:SE_UBICA_EN]->(c4)
+WITH p4, c4
+
+MATCH (p5: Proveedor{idProveedor: 9005}), (c5: Ciudad{idCiudad: 3305})
+CREATE (p5)-[:SE_UBICA_EN]->(c5)
+WITH p5, c5
+
+MATCH (p6: Proveedor{idProveedor: 9006}), (c6: Ciudad{idCiudad: 3310})
+CREATE (p6)-[:SE_UBICA_EN]->(c6)
+WITH p6, c6
+
+MATCH (p7: Proveedor{idProveedor: 9007}), (c7: Ciudad{idCiudad: 3310})
+CREATE (p7)-[:SE_UBICA_EN]->(c7)
+WITH p7, c7
+
+MATCH (p8: Proveedor{idProveedor: 9008}), (c8: Ciudad{idCiudad: 3318})
+CREATE (p8)-[:SE_UBICA_EN]->(c8)
+WITH p8, c8
+
+MATCH (p9: Proveedor{idProveedor: 9009}), (c9: Ciudad{idCiudad: 3307})
+CREATE (p9)-[:SE_UBICA_EN]->(c9)
+WITH p9, c9
+
+MATCH (p10: Proveedor{idProveedor: 9010}), (c10: Ciudad{idCiudad: 3310})
+CREATE (p10)-[:SE_UBICA_EN]->(c10)
+WITH p10, c10
+
+MATCH (p11: Proveedor{idProveedor: 9011}), (c11: Ciudad{idCiudad: 3315})
+CREATE (p11)-[:SE_UBICA_EN]->(c11)
+WITH p11, c11
+
+MATCH (p12: Proveedor{idProveedor: 9012}), (c12: Ciudad{idCiudad: 3302})
+CREATE (p12)-[:SE_UBICA_EN]->(c12)
+WITH p12, c12
+
+MATCH (p13: Proveedor{idProveedor: 9013}), (c13: Ciudad{idCiudad: 3314})
+CREATE (p13)-[:SE_UBICA_EN]->(c13)
+WITH p13, c13
+
+MATCH (p14: Proveedor{idProveedor: 9014}), (c14: Ciudad{idCiudad: 3303})
+CREATE (p14)-[:SE_UBICA_EN]->(c14)
+WITH p14, c14
+
+MATCH (p15: Proveedor{idProveedor: 9015}), (c15: Ciudad{idCiudad: 3302})
+CREATE (p15)-[:SE_UBICA_EN]->(c15);
+
+
+// Relaciones entre Clientes y Estudios
+MATCH (c1: Cliente{idCliente: 1002}), (e1: Estudio{idEstudio: 4408})
+CREATE (c1)-[:TIENE_TITULO_EN]->(e1)
+WITH c1, e1
+
+MATCH (c2: Cliente{idCliente: 1003}), (e2: Estudio{idEstudio: 4420})
+CREATE (c2)-[:TIENE_TITULO_EN]->(e2)
+WITH c2, e2
+
+MATCH (c3: Cliente{idCliente: 1004}), (e3: Estudio{idEstudio: 4413})
+CREATE (c3)-[:TIENE_TITULO_EN]->(e3)
+WITH c3, e3
+
+MATCH (c4: Cliente{idCliente: 1006}), (e4: Estudio{idEstudio: 4410})
+CREATE (c4)-[:TIENE_TITULO_EN]->(e4)
+WITH c4, e4
+
+MATCH (c5: Cliente{idCliente: 1007}), (e5: Estudio{idEstudio: 4404})
+CREATE (c5)-[:TIENE_TITULO_EN]->(e5)
+WITH c5, e5
+
+MATCH (c6: Cliente{idCliente: 1008}), (e6: Estudio{idEstudio: 4402})
+CREATE (c6)-[:TIENE_TITULO_EN]->(e6)
+WITH c6, e6
+
+MATCH (c7: Cliente{idCliente: 1010}), (e7: Estudio{idEstudio: 4409})
+CREATE (c7)-[:TIENE_TITULO_EN]->(e7)
+WITH c7, e7
+
+MATCH (c8: Cliente{idCliente: 1011}), (e8: Estudio{idEstudio: 4401})
+CREATE (c8)-[:TIENE_TITULO_EN]->(e8)
+WITH c8, e8
+
+MATCH (c9: Cliente{idCliente: 1012}), (e9: Estudio{idEstudio: 4408})
+CREATE (c9)-[:TIENE_TITULO_EN]->(e9)
+WITH c9, e9
+
+MATCH (c10: Cliente{idCliente: 1013}), (e10: Estudio{idEstudio: 4412})
+CREATE (c10)-[:TIENE_TITULO_EN]->(e10)
+WITH c10, e10
+
+MATCH (c11: Cliente{idCliente: 1014}), (e11: Estudio{idEstudio: 4408})
+CREATE (c11)-[:TIENE_TITULO_EN]->(e11)
+WITH c11, e11
+
+MATCH (c12: Cliente{idCliente: 1015}), (e12: Estudio{idEstudio: 4420})
+CREATE (c12)-[:TIENE_TITULO_EN]->(e12)
+WITH c12, e12
+
+MATCH (c13: Cliente{idCliente: 1016}), (e13: Estudio{idEstudio: 4401})
+CREATE (c12)-[:TIENE_TITULO_EN]->(e12)
+WITH c12, e12
+
+MATCH (c14: Cliente{idCliente: 1019}), (e14: Estudio{idEstudio: 4401})
+CREATE (c14)-[:TIENE_TITULO_EN]->(e14)
+WITH c14, e14
+
+MATCH (c15: Cliente{idCliente: 1020}), (e15: Estudio{idEstudio: 4416})
+CREATE (c15)-[:TIENE_TITULO_EN]->(e15);
+
+
+// Relaciones Productos con Categorías
+MATCH (p1: Producto{idProducto: 60011}), (c1: Categoria{idCategoria: 703})
+CREATE (p1)-[:PERTENECE_A]->(c1)
+WITH p1, c1
+
+MATCH (p2: Producto{idProducto: 60012}), (c2: Categoria{idCategoria: 703})
+CREATE (p2)-[:PERTENECE_A]->(c2)
+WITH p2, c2
+
+MATCH (p3: Producto{idProducto: 60013}), (c3: Categoria{idCategoria: 710})
+CREATE (p3)-[:PERTENECE_A]->(c3)
+WITH p3, c3
+
+MATCH (p4: Producto{idProducto: 60014}), (c4: Categoria{idCategoria: 703})
+CREATE (p4)-[:PERTENECE_A]->(c4)
+WITH p4, c4
+
+MATCH (p5: Producto{idProducto: 60015}), (c5: Categoria{idCategoria: 705})
+CREATE (p5)-[:PERTENECE_A]->(c5)
+WITH p5, c5
+
+MATCH (p6: Producto{idProducto: 60016}), (c6: Categoria{idCategoria: 705})
+CREATE (p6)-[:PERTENECE_A]->(c6)
+WITH p6, c6
+
+MATCH (p7: Producto{idProducto: 60017}), (c7: Categoria{idCategoria: 705})
+CREATE (p7)-[:PERTENECE_A]->(c7)
+WITH p7, c7
+
+MATCH (p8: Producto{idProducto: 60018}), (c8: Categoria{idCategoria: 705})
+CREATE (p8)-[:PERTENECE_A]->(c8)
+WITH p8, c8
+
+MATCH (p9: Producto{idProducto: 60019}), (c9: Categoria{idCategoria: 705})
+CREATE (p9)-[:PERTENECE_A]->(c9)
+WITH p9, c9
+
+MATCH (p10: Producto{idProducto: 60021}), (c10: Categoria{idCategoria: 702})
+CREATE (p10)-[:PERTENECE_A]->(c10)
+WITH p10, c10
+
+MATCH (p11: Producto{idProducto: 60022}), (c11: Categoria{idCategoria: 702})
+CREATE (p11)-[:PERTENECE_A]->(c11)
+WITH p11, c11
+
+MATCH (p12: Producto{idProducto: 60023}), (c12: Categoria{idCategoria: 703})
+CREATE (p12)-[:PERTENECE_A]->(c12)
+WITH p12, c12
+
+MATCH (p13: Producto{idProducto: 60024}), (c13: Categoria{idCategoria: 703})
+CREATE (p13)-[:PERTENECE_A]->(c13)
+WITH p13, c13
+
+MATCH (p14: Producto{idProducto: 60025}), (c14: Categoria{idCategoria: 703})
+CREATE (p14)-[:PERTENECE_A]->(c14)
+WITH p14, c14
+
+MATCH (p15: Producto{idProducto: 60026}), (c15: Categoria{idCategoria: 703})
+CREATE (p15)-[:PERTENECE_A]->(c15)
+WITH p15, c15
+
+MATCH (p16: Producto{idProducto: 60027}), (c16: Categoria{idCategoria: 705})
+CREATE (p16)-[:PERTENECE_A]->(c16)
+WITH p16, c16
+
+MATCH (p17: Producto{idProducto: 60028}), (c17: Categoria{idCategoria: 703})
+CREATE (p17)-[:PERTENECE_A]->(c17)
+WITH p17, c17
+
+MATCH (p18: Producto{idProducto: 60029}), (c18: Categoria{idCategoria: 704})
+CREATE (p18)-[:PERTENECE_A]->(c18)
+WITH p18, c18
+
+MATCH (p19: Producto{idProducto: 60030}), (c19: Categoria{idCategoria: 704})
+CREATE (p19)-[:PERTENECE_A]->(c19)
+WITH p19, c19
+
+MATCH (p20: Producto{idProducto: 60031}), (c20: Categoria{idCategoria: 710})
+CREATE (p20)-[:PERTENECE_A]->(c20);
+
+
+// relaciones entre Clientes y Aficion
+MATCH (c1:Cliente{idCliente: 1001}),(a1:Aficion{nombre: 'Piano'})
+CREATE (c1)-[:TIENE_UNA]->(a1)
+WITH c1, a1
+
+MATCH (c2:Cliente{idCliente: 1002}),(a2:Aficion{nombre: 'Gaming'})
+CREATE (c2)-[:TIENE_UNA]->(a2)
+WITH c2, a2
+
+MATCH (c3:Cliente{idCliente: 1003}),(a3:Aficion{nombre: 'Ajedres'})
+CREATE (c3)-[:TIENE_UNA]->(a3)
+WITH c3, a3
+
+MATCH (c4:Cliente{idCliente: 1004}),(a4:Aficion{nombre: 'Futbol'})
+CREATE (c4)-[:TIENE_UNA]->(a4)
+WITH c4, a4
+
+MATCH (c5:Cliente{idCliente: 1005}),(a5:Aficion{nombre: 'Grafiti'})
+CREATE (c5)-[:TIENE_UNA]->(a5)
+WITH c5, a5
+
+MATCH (c6:Cliente{idCliente: 1006}),(a6:Aficion{nombre: 'Gaming'})
+CREATE (c6)-[:TIENE_UNA]->(a6)
+WITH c6, a6
+
+MATCH (c7:Cliente{idCliente: 1007}),(a7:Aficion{nombre: 'Piano'})
+CREATE (c7)-[:TIENE_UNA]->(a7)
+WITH c7, a7
+
+MATCH (c8:Cliente{idCliente: 1008}),(a8:Aficion{nombre: 'Poesia'})
+CREATE (c8)-[:TIENE_UNA]->(a8)
+WITH c8, a8
+
+MATCH (c9:Cliente{idCliente: 1009}),(a9:Aficion{nombre: 'Piano'})
+CREATE (c9)-[:TIENE_UNA]->(a9)
+WITH c9, a9
+
+MATCH (c10:Cliente{idCliente: 1010}),(a10:Aficion{nombre: 'Composicion'})
+CREATE (c10)-[:TIENE_UNA]->(a10)
+WITH c10, a10
+
+MATCH (c11:Cliente{idCliente: 1011}),(a11:Aficion{nombre: 'Bases de datos'})
+CREATE (c11)-[:TIENE_UNA]->(a11)
+WITH c11, a11
+
+MATCH (c12:Cliente{idCliente: 1012}),(a12:Aficion{nombre: 'Gaming'})
+CREATE (c12)-[:TIENE_UNA]->(a12)
+WITH c12, a12
+
+MATCH (c13:Cliente{idCliente: 1013}),(a13:Aficion{nombre: 'Surf'})
+CREATE (c13)-[:TIENE_UNA]->(a13)
+WITH c13, a13
+
+MATCH (c14:Cliente{idCliente: 1014}),(a14:Aficion{nombre: 'Skate'})
+CREATE (c14)-[:TIENE_UNA]->(a14)
+WITH c14, a14
+
+MATCH (c15:Cliente{idCliente: 1015}),(a15:Aficion{nombre: 'Piano'})
+CREATE (c15)-[:TIENE_UNA]->(a15)
+WITH c15, a15
+
+MATCH (c16:Cliente{idCliente: 1016}),(a16:Aficion{nombre: 'Skate'})
+CREATE (c16)-[:TIENE_UNA]->(a16)
+WITH c16, a16
+
+MATCH (c17:Cliente{idCliente: 1017}),(a17:Aficion{nombre: 'Surf'})
+CREATE (c17)-[:TIENE_UNA]->(a17)
+WITH c17, a17
+
+MATCH (c18:Cliente{idCliente: 1018}),(a18:Aficion{nombre: 'Gaming'})
+CREATE (c18)-[:TIENE_UNA]->(a18)
+WITH c18, a18
+
+MATCH (c19:Cliente{idCliente: 1019}),(a19:Aficion{nombre: 'Guitarra'})
+CREATE (c19)-[:TIENE_UNA]->(a19)
+WITH c19, a19
+
+MATCH (c20:Cliente{idCliente: 1020}),(a20:Aficion{nombre: 'Gaming'})
+CREATE (c20)-[:TIENE_UNA]->(a20);
+
+
+// Relaciones entre Clientes y Ordenes
+MATCH (c1: Cliente{idCliente: 1001}), (o1: Orden{idOrden: 550001})
+CREATE (c1)-[:HA_CREADO]->(o1)
+WITH c1, o1
+
+MATCH (c2: Cliente{idCliente: 1002}), (o2: Orden{idOrden: 550002})
+CREATE (c2)-[:HA_CREADO]->(o2)
+WITH c2, o2
+
+MATCH (c3: Cliente{idCliente: 1003}), (o3: Orden{idOrden: 550003})
+CREATE (c3)-[:HA_CREADO]->(o3)
+WITH c3, o3
+
+MATCH (c4: Cliente{idCliente: 1004}), (o4: Orden{idOrden: 550004})
+CREATE (c4)-[:HA_CREADO]->(o4)
+WITH c4, o4
+
+MATCH (c5: Cliente{idCliente: 1005}), (o5: Orden{idOrden: 550005})
+CREATE (c5)-[:HA_CREADO]->(o5)
+WITH c5, o5
+
+MATCH (c6: Cliente{idCliente: 1006}), (o6: Orden{idOrden: 550006})
+CREATE (c6)-[:HA_CREADO]->(o6)
+WITH c6, o6
+
+MATCH (c7: Cliente{idCliente: 1007}), (o7: Orden{idOrden: 550007})
+CREATE (c7)-[:HA_CREADO]->(o7)
+WITH c7, o7
+
+MATCH (c8: Cliente{idCliente: 1008}), (o8: Orden{idOrden: 550008})
+CREATE (c8)-[:HA_CREADO]->(o8)
+WITH c8, o8
+
+MATCH (c9: Cliente{idCliente: 1009}), (o9: Orden{idOrden: 550009})
+CREATE (c9)-[:HA_CREADO]->(o9)
+WITH c9, o9
+
+MATCH (c10: Cliente{idCliente: 1010}), (o10: Orden{idOrden: 550010})
+CREATE (c10)-[:HA_CREADO]->(o10)
+WITH c10, o10
+
+MATCH (c11: Cliente{idCliente: 1011}), (o11: Orden{idOrden: 550011})
+CREATE (c11)-[:HA_CREADO]->(o11)
+WITH c11, o11
+
+MATCH (c12: Cliente{idCliente: 1012}), (o12: Orden{idOrden: 550012})
+CREATE (c12)-[:HA_CREADO]->(o12)
+WITH c12, o12
+
+MATCH (c13: Cliente{idCliente: 1013}), (o13: Orden{idOrden: 550013})
+CREATE (c13)-[:HA_CREADO]->(o13)
+WITH c13, o13
+
+MATCH (c14: Cliente{idCliente: 1014}), (o14: Orden{idOrden: 550014})
+CREATE (c14)-[:HA_CREADO]->(o14)
+WITH c14, o14
+
+MATCH (c15: Cliente{idCliente: 1015}), (o15: Orden{idOrden: 550015})
+CREATE (c15)-[:HA_CREADO]->(o15)
+WITH c15, o15
+
+MATCH (c16: Cliente{idCliente: 1016}), (o16: Orden{idOrden: 550016})
+CREATE (c16)-[:HA_CREADO]->(o16)
+WITH c16, o16
+
+MATCH (c17: Cliente{idCliente: 1017}), (o17: Orden{idOrden: 550017})
+CREATE (c17)-[:HA_CREADO]->(o17)
+WITH c17, o17
+
+MATCH (c18: Cliente{idCliente: 1018}), (o18: Orden{idOrden: 550018})
+CREATE (c18)-[:HA_CREADO]->(o18)
+WITH c18, o18
+
+MATCH (c19: Cliente{idCliente: 1019}), (o19: Orden{idOrden: 550019})
+CREATE (c19)-[:HA_CREADO]->(o19)
+WITH c19, o19
+
+MATCH (c20: Cliente{idCliente: 1020}), (o20: Orden{idOrden: 550020})
+CREATE (c20)-[:HA_CREADO]->(o20);
+
+
+// Relaciones entre Clientes y Productos
+MATCH (c1: Cliente{idCliente: 1001}), (p1:  Producto{idProducto: 60031})
+CREATE (c1)-[:HA_VISTO]->(p1)
+WITH c1, p1
+
+MATCH (c2: Cliente{idCliente: 1002}), (p2:  Producto{idProducto: 60014})
+CREATE (c2)-[:HA_VISTO]->(p2)
+WITH c2, p2
+
+MATCH (c3: Cliente{idCliente: 1003}), (p3:  Producto{idProducto: 60027})
+CREATE (c3)-[:HA_VISTO]->(p3)
+WITH c3, p3
+
+MATCH (c4: Cliente{idCliente: 1004}), (p4:  Producto{idProducto: 60019})
+CREATE (c4)-[:HA_VISTO]->(p4)
+WITH c4, p4
+
+MATCH (c5: Cliente{idCliente: 1005}), (p5:  Producto{idProducto: 60015})
+CREATE (c5)-[:HA_VISTO]->(p5)
+WITH c5, p5
+
+MATCH (c6: Cliente{idCliente: 1006}), (p6:  Producto{idProducto: 60023})
+CREATE (c6)-[:HA_VISTO]->(p6)
+WITH c6, p6
+
+MATCH (c7: Cliente{idCliente: 1007}), (p7:  Producto{idProducto: 60029})
+CREATE (c7)-[:HA_VISTO]->(p7)
+WITH c7, p7
+
+MATCH (c8: Cliente{idCliente: 1008}), (p8:  Producto{idProducto: 60019})
+CREATE (c8)-[:HA_VISTO]->(p8)
+WITH c8, p8
+
+MATCH (c9: Cliente{idCliente: 1009}), (p9:  Producto{idProducto: 60031})
+CREATE (c9)-[:HA_VISTO]->(p9)
+WITH c9, p9
+
+MATCH (c10: Cliente{idCliente: 1010}), (p10:  Producto{idProducto: 60024})
+CREATE (c10)-[:HA_VISTO]->(p10)
+WITH c10, p10
+
+MATCH (c11: Cliente{idCliente: 1011}), (p11:  Producto{idProducto: 60031})
+CREATE (c11)-[:HA_VISTO]->(p11)
+WITH c11, p11
+
+MATCH (c12: Cliente{idCliente: 1012}), (p12:  Producto{idProducto: 60026})
+CREATE (c12)-[:HA_VISTO]->(p12)
+WITH c12, p12
+
+MATCH (c13: Cliente{idCliente: 1013}), (p13:  Producto{idProducto: 60026})
+CREATE (c13)-[:HA_VISTO]->(p13)
+WITH c13, p13
+
+MATCH (c14: Cliente{idCliente: 1014}), (p14:  Producto{idProducto: 60026})
+CREATE (c14)-[:HA_VISTO]->(p14)
+WITH c14, p14
+
+MATCH (c15: Cliente{idCliente: 1015}), (p15:  Producto{idProducto: 60026})
+CREATE (c15)-[:HA_VISTO]->(p15)
+WITH c15, p15
+
+MATCH (c16: Cliente{idCliente: 1016}), (p16:  Producto{idProducto: 60027})
+CREATE (c16)-[:HA_VISTO]->(p16)
+WITH c16, p16
+
+MATCH (c17: Cliente{idCliente: 1017}), (p17:  Producto{idProducto: 60026})
+CREATE (c17)-[:HA_VISTO]->(p17)
+WITH c17, p17
+
+MATCH (c18: Cliente{idCliente: 1018}), (p18:  Producto{idProducto: 60012})
+CREATE (c18)-[:HA_VISTO]->(p18)
+WITH c18, p18
+
+MATCH (c19: Cliente{idCliente: 1019}), (p19:  Producto{idProducto: 60011})
+CREATE (c19)-[:HA_VISTO]->(p19)
+WITH c19, p19
+
+MATCH (c20: Cliente{idCliente: 1020}), (p20:  Producto{idProducto: 60016})
+CREATE (c20)-[:HA_VISTO]->(p20);
+
+
+// Relación entre Producto y producto
+MATCH (pr1: Producto{idProducto: 60011}), (pd1:  Producto{idProducto: 60030})
+CREATE (pr1)-[:ESTA_RELACIONADO]->(pd1)
+WITH pr1, pd1
+
+MATCH (pr2: Producto{idProducto: 60012}), (pd2:  Producto{idProducto: 60026})
+CREATE (pr2)-[:ESTA_RELACIONADO]->(pd2)
+WITH pr2, pd2
+
+MATCH (pr3: Producto{idProducto: 60013}), (pd3:  Producto{idProducto: 60017})
+CREATE (pr3)-[:ESTA_RELACIONADO]->(pd3)
+WITH pr3, pd3
+
+MATCH (pr4: Producto{idProducto: 60014}), (pd4:  Producto{idProducto: 60024})
+CREATE (pr4)-[:ESTA_RELACIONADO]->(pd4)
+WITH pr4, pd4
+
+MATCH (pr5: Producto{idProducto: 60015}), (pd5:  Producto{idProducto: 60028})
+CREATE (pr5)-[:ESTA_RELACIONADO]->(pd5)
+WITH pr5, pd5
+
+MATCH (pr6: Producto{idProducto: 60016}), (pd6:  Producto{idProducto: 60028})
+CREATE (pr6)-[:ESTA_RELACIONADO]->(pd6)
+WITH pr6, pd6
+
+MATCH (pr7: Producto{idProducto: 60017}), (pd7:  Producto{idProducto: 60016})
+CREATE (pr7)-[:ESTA_RELACIONADO]->(pd7)
+WITH pr7, pd7
+
+MATCH (pr8: Producto{idProducto: 60018}), (pd8:  Producto{idProducto: 60016})
+CREATE (pr8)-[:ESTA_RELACIONADO]->(pd8)
+WITH pr8, pd8
+
+MATCH (pr9: Producto{idProducto: 60019}), (pd9:  Producto{idProducto: 60017})
+CREATE (pr9)-[:ESTA_RELACIONADO]->(pd9)
+WITH pr9, pd9
+
+MATCH (pr10: Producto{idProducto: 60021}), (pd10:  Producto{idProducto: 60031})
+CREATE (pr10)-[:ESTA_RELACIONADO]->(pd10)
+WITH pr10, pd10
+
+MATCH (pr11: Producto{idProducto: 60022}), (pd11:  Producto{idProducto: 60031})
+CREATE (pr11)-[:ESTA_RELACIONADO]->(pd11)
+WITH pr11, pd11
+
+MATCH (pr12: Producto{idProducto: 60023}), (pd12:  Producto{idProducto: 60030})
+CREATE (pr12)-[:ESTA_RELACIONADO]->(pd12)
+WITH pr12, pd12
+
+MATCH (pr13: Producto{idProducto: 60024}), (pd13:  Producto{idProducto: 60015})
+CREATE (pr13)-[:ESTA_RELACIONADO]->(pd13)
+WITH pr13, pd13
+
+MATCH (pr14: Producto{idProducto: 60025}), (pd14:  Producto{idProducto: 60015})
+CREATE (pr14)-[:ESTA_RELACIONADO]->(pd14)
+WITH pr14, pd14
+
+MATCH (pr15: Producto{idProducto: 60026}), (pd15:  Producto{idProducto: 60027})
+CREATE (pr15)-[:ESTA_RELACIONADO]->(pd15)
+WITH pr15, pd15
+
+MATCH (pr16: Producto{idProducto: 60027}), (pd16:  Producto{idProducto: 60028})
+CREATE (pr16)-[:ESTA_RELACIONADO]->(pd16)
+WITH pr16, pd16
+
+MATCH (pr17: Producto{idProducto: 60028}), (pd17:  Producto{idProducto: 60026})
+CREATE (pr17)-[:ESTA_RELACIONADO]->(pd17)
+WITH pr17, pd17
+
+MATCH (pr18: Producto{idProducto: 60029}), (pd18:  Producto{idProducto: 60026})
+CREATE (pr18)-[:ESTA_RELACIONADO]->(pd18)
+WITH pr18, pd18
+
+MATCH (pr19: Producto{idProducto: 60030}), (pd19:  Producto{idProducto: 60026})
+CREATE (pr19)-[:ESTA_RELACIONADO]->(pd19)
+WITH pr19, pd19
+
+MATCH (pr20: Producto{idProducto: 60031}), (pd20:  Producto{idProducto: 60028})
+CREATE (pr20)-[:ESTA_RELACIONADO]->(pd20);
+
+
+
+// Relaciones entre Productos y Proveedores
+MATCH (pro1: Producto{idProducto: 60011}), (pve1:  Proveedor{idProveedor: 9003})
+CREATE (pro1)-[:DISTRIBUIDO_POR]->(pve1)
+WITH pro1,  pve1
+
+MATCH (pro2: Producto{idProducto: 60012}), (pve2:  Proveedor{idProveedor: 9002})
+CREATE (pro2)-[:DISTRIBUIDO_POR]->(pve2)
+WITH pro2,  pve2
+
+MATCH (pro3: Producto{idProducto: 60013}), (pve3:  Proveedor{idProveedor: 9001})
+CREATE (pro3)-[:DISTRIBUIDO_POR]->(pve3)
+WITH pro3,  pve3
+
+MATCH (pro4: Producto{idProducto: 60014}), (pve4:  Proveedor{idProveedor: 9001})
+CREATE (pro4)-[:DISTRIBUIDO_POR]->(pve4)
+WITH pro4,  pve4
+
+MATCH (pro5: Producto{idProducto: 60015}), (pve5:  Proveedor{idProveedor: 9007})
+CREATE (pro5)-[:DISTRIBUIDO_POR]->(pve5)
+WITH pro5,  pve5
+
+MATCH (pro6: Producto{idProducto: 60016}), (pve6:  Proveedor{idProveedor: 9007})
+CREATE (pro6)-[:DISTRIBUIDO_POR]->(pve6)
+WITH pro6,  pve6
+
+MATCH (pro7: Producto{idProducto: 60017}), (pve7:  Proveedor{idProveedor: 9006})
+CREATE (pro7)-[:DISTRIBUIDO_POR]->(pve7)
+WITH pro7,  pve7
+
+MATCH (pro8: Producto{idProducto: 60018}), (pve8:  Proveedor{idProveedor: 9006})
+CREATE (pro8)-[:DISTRIBUIDO_POR]->(pve8)
+WITH pro8,  pve8
+
+MATCH (pro9: Producto{idProducto: 60019}), (pve9:  Proveedor{idProveedor: 9010})
+CREATE (pro9)-[:DISTRIBUIDO_POR]->(pve9)
+WITH pro9,  pve9
+
+MATCH (pro10: Producto{idProducto: 60021}), (pve10:  Proveedor{idProveedor: 9009})
+CREATE (pro10)-[:DISTRIBUIDO_POR]->(pve10)
+WITH pro10,  pve10
+
+MATCH (pro11: Producto{idProducto: 60022}), (pve11:  Proveedor{idProveedor: 9009})
+CREATE (pro11)-[:DISTRIBUIDO_POR]->(pve11)
+WITH pro11,  pve11
+
+MATCH (pro12: Producto{idProducto: 60023}), (pve12:  Proveedor{idProveedor: 9014})
+CREATE (pro12)-[:DISTRIBUIDO_POR]->(pve12)
+WITH pro12,  pve12
+
+MATCH (pro13: Producto{idProducto: 60024}), (pve13:  Proveedor{idProveedor: 9014})
+CREATE (pro13)-[:DISTRIBUIDO_POR]->(pve13)
+WITH pro13,  pve13
+
+MATCH (pro14: Producto{idProducto: 60025}), (pve14:  Proveedor{idProveedor: 9014})
+CREATE (pro14)-[:DISTRIBUIDO_POR]->(pve14)
+WITH pro14,  pve14
+
+MATCH (pro15: Producto{idProducto: 60026}), (pve15:  Proveedor{idProveedor: 9014})
+CREATE (pro15)-[:DISTRIBUIDO_POR]->(pve15)
+WITH pro15,  pve15
+
+MATCH (pro16: Producto{idProducto: 60027}), (pve16:  Proveedor{idProveedor: 9004})
+CREATE (pro16)-[:DISTRIBUIDO_POR]->(pve16)
+WITH pro16,  pve16
+
+MATCH (pro17: Producto{idProducto: 60028}), (pve17:  Proveedor{idProveedor: 9005})
+CREATE (pro17)-[:DISTRIBUIDO_POR]->(pve17)
+WITH pro17,  pve17
+
+MATCH (pro18: Producto{idProducto: 60029}), (pve18:  Proveedor{idProveedor: 9013})
+CREATE (pro18)-[:DISTRIBUIDO_POR]->(pve18)
+WITH pro18,  pve18
+
+MATCH (pro19: Producto{idProducto: 60030}), (pve19:  Proveedor{idProveedor: 9013})
+CREATE (pro19)-[:DISTRIBUIDO_POR]->(pve19)
+WITH pro19,  pve19
+
+MATCH (pro20: Producto{idProducto: 60031}), (pve20:  Proveedor{idProveedor: 9009})
+CREATE (pro20)-[:DISTRIBUIDO_POR]->(pve20);

@@ -1,0 +1,73 @@
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/sergiotal/actividad_grafos/refs/heads/main/bases/Aficiones.csv' AS row
+WITH row WHERE row.nombre is NOT NULL
+MERGE (a: Aficion{
+    nombre: row.nombre,
+    tipo: row.tipo
+});
+
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/sergiotal/actividad_grafos/refs/heads/main/bases/Categorias.csv' AS row
+WITH row WHERE row.idCategoria is NOT NULL
+MERGE (c: Categoria{
+    idCategoria: toInteger(row.idCategoria),
+    nombre: row.nombre
+});
+
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/sergiotal/actividad_grafos/refs/heads/main/bases/Ciudades.csv' AS row
+WITH row WHERE row.idCiudad is NOT NULL
+MERGE (c: Ciudad{
+    idCiudad: toInteger(row.idCiudad),
+    nombre: row.nombre,
+    pais: row.pais
+});
+
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/sergiotal/actividad_grafos/refs/heads/main/bases/Clientes.csv' AS row
+WITH row WHERE row.idCliente is NOT NULL
+MERGE (c: Cliente{
+    idCliente: toInteger(row.idCliente),
+    nombre: row.nombre,
+    edad: toInteger(row.edad),
+    telefono: row.telefono,
+    sexo: row.sexo,
+    tieneTitulo: row.tieneTitulo
+});
+
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/sergiotal/actividad_grafos/refs/heads/main/bases/Direcciones.csv' AS row
+WITH row WHERE row.idDireccion is NOT NULL
+MERGE (d: Direccion{
+    idDireccion: toInteger(row.idDireccion),
+    ubicacion: row.ubicacion,
+    numero: toInteger(row.numero),
+    barrio: row.barrio,
+    codigoPostal: toInteger(row.codigoPostal)
+});
+
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/sergiotal/actividad_grafos/refs/heads/main/bases/Estudios.csv' AS row
+WITH row WHERE row.idEstudio is NOT NULL
+MERGE (e: Estudio{
+    idEstudio: toInteger(row.idEstudio),
+    titulo: row.titulo
+});
+
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/sergiotal/actividad_grafos/refs/heads/main/bases/Ordenes.csv' AS row
+WITH row WHERE row.idOrden is NOT NULL
+MERGE (o: Orden{
+    idOrden: toInteger(row.idOrden),
+    fechaOrden: date(row.fechaOrden),
+    monto: toFloat(row.monto)
+});
+
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/sergiotal/actividad_grafos/refs/heads/main/bases/Productos.csv' AS row
+WITH row WHERE row.idProducto is NOT NULL
+MERGE (p: Producto{
+	idProducto: toInteger(row.idProducto),
+	nombre: row.nombre,
+	precio: toFloat(row.precio)
+});
+
+
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/sergiotal/actividad_grafos/refs/heads/main/bases/Proveedores.csv' AS row
+WITH row WHERE row.idProveedor is NOT NULL
+MERGE (p: Proveedor{
+	idProveedor: toInteger(row.idProveedor),
+	nombre: row.nombre	
+});

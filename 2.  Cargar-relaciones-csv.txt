@@ -1,0 +1,54 @@
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/sergiotal/actividad_grafos/refs/heads/main/relaciones/ViveEn.csv' AS row
+MATCH (c: Cliente{idCliente: toInteger(row.clienteId)})
+MATCH (d: Direccion{idDireccion: toInteger(row.direccionId)})
+CREATE (c)-[:VIVE_EN]->(d);
+
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/sergiotal/actividad_grafos/refs/heads/main/relaciones/EstaUbicadaEn.csv' AS row
+MATCH (d: Direccion{idDireccion: toInteger(row.direccionId)})
+MATCH (c: Ciudad{idCiudad: toInteger(row.ciudadId)})
+CREATE (d)-[:ESTA_UBICADA_EN]->(c);
+
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/sergiotal/actividad_grafos/refs/heads/main/relaciones/SeUbicaEn.csv' AS row
+MATCH (p: Proveedor{idProveedor: toInteger(row.proveedorId)})
+MATCH (c: Ciudad{idCiudad: toInteger(row.ciudadId)})
+CREATE (p)-[:SE_UBICA_EN]->(c);
+
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/sergiotal/actividad_grafos/refs/heads/main/relaciones/TieneTituloEn.csv' AS row
+MATCH (c: Cliente{idCliente: toInteger(row.clienteId)})
+MATCH (e: Estudio{idEstudio: toInteger(row.estudioId)})
+CREATE (c)-[:TIENE_TITULO_EN]->(e);
+
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/sergiotal/actividad_grafos/refs/heads/main/relaciones/PerteneceA.csv' AS row
+MATCH (p: Producto{idProducto: toInteger(row.productoId)})
+MATCH (c: Categoria{idCategoria: toInteger(row.categoriaId)})
+CREATE (p)-[:PERTENECE_A]->(c);
+
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/sergiotal/actividad_grafos/refs/heads/main/relaciones/TieneUna.csv' AS row
+MATCH (c: Cliente{idCliente: toInteger(row.clienteId)})
+MATCH (a: Aficion{nombre: row.nombreA})
+CREATE (c)-[:TIENE_UNA]->(a);
+
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/sergiotal/actividad_grafos/refs/heads/main/relaciones/HaCreado.csv' AS row
+MATCH (c: Cliente{idCliente: toInteger(row.clienteId)})
+MATCH (o: Orden{idOrden: toInteger(row.ordenId)})
+CREATE (c)-[:HA_CREADO]->(o);
+
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/sergiotal/actividad_grafos/refs/heads/main/relaciones/HaVisto.csv' AS row
+MATCH (c: Cliente{idCliente: toInteger(row.clienteId)})
+MATCH (p: Producto{idProducto: toInteger(row.productoId)})
+CREATE (c)-[:HA_VISTO]->(p);
+
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/sergiotal/actividad_grafos/refs/heads/main/relaciones/EstaRelacionado.csv' AS row
+MATCH (p1: Producto{idProducto: toInteger(row.productoId1)})
+MATCH (p2: Producto{idProducto: toInteger(row.productoId2)})
+CREATE (p1)-[:ESTA_RELACIONADO]->(p2);
+
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/sergiotal/actividad_grafos/refs/heads/main/relaciones/DistribuidoPor.csv' AS row
+MATCH (p1: Producto{idProducto: toInteger(row.productoId)})
+MATCH (p2: Proveedor{idProveedor: toInteger(row.proveedorId)})
+CREATE (p1)-[:DISTRIBUIDO_POR]->(p2);
+
+LOAD CSV WITH HEADERS FROM 'https://raw.githubusercontent.com/sergiotal/actividad_grafos/refs/heads/main/relaciones/EstaCompuestaDe.csv' AS row
+MATCH (o1: Orden{idOrden: toInteger(row.ordenId)})
+MATCH (p1: Producto{idProducto: toInteger(row.productoId)})
+CREATE (o1)-[:ESTA_COMPUESTA_DE {cantidad: row.cantidad}]->(p1);
