@@ -1,4 +1,4 @@
-idOrden,idProducto,cantidad
+ordenId,productoId,cantidad
 2001,3001,6
 2001,3003,2
 2002,3004,4
