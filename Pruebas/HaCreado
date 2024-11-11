@@ -1,4 +1,4 @@
-idCliente,idOrden
+clienteId,ordenId
 1001,2001
 1001,2002
 1002,2003
